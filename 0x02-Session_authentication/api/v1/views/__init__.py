@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-""" DocDocDocDocDocDoc
+""" Docstring for api/v1/views/__init__.py module
 """
 from flask import Blueprint
 
