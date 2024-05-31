@@ -13,10 +13,16 @@ from typing import (
 from db import DB
 from user import User
 
-U = TypeVar(User)
+U = TypeVar('U', bound=User)
 
 
 def _hash_password(password: str) -> bytes:
+    """
+    Hashes a password string and returns it in bytes form
+    Args:
+        password (str): password in string format
+    """
+    passwd = password.encode('utf-8')
     return bcrypt.hashpw(passwd, bcrypt.gensalt())
 
 
